@@ -20,6 +20,8 @@ class CardPage extends StatelessWidget {
 
   _cardTipo1() {
     return Card(
+      elevation: 5.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Column(
         children: <Widget>[
           ListTile(
@@ -48,20 +50,22 @@ class CardPage extends StatelessWidget {
 
   _cardTipo2() {
     return Card(
+      elevation: 5.0,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      clipBehavior: Clip.antiAlias,
       child: Column(
         children: <Widget>[
           FadeInImage(
-            placeholder: AssetImage('assets/cargando.gif'), 
-            fadeInDuration: Duration(milliseconds: 200 ),
-            image: NetworkImage('https://ticotimes.net/wp-content/uploads/2017/05/09-Guacalillo-Beach-360.jpg'),
+            placeholder: AssetImage('assets/cargando.gif'),
+            fadeInDuration: Duration(milliseconds: 200),
+            image: NetworkImage(
+                'https://ticotimes.net/wp-content/uploads/2017/05/09-Guacalillo-Beach-360.jpg'),
             height: 300.0,
             fit: BoxFit.cover,
           ),
-          
           Container(
-            padding: EdgeInsets.all(10.0),
-            child: Text('no tengo idea de que poner')
-          )
+              padding: EdgeInsets.all(10.0),
+              child: Text('no tengo idea de que poner'))
         ],
       ),
     );
