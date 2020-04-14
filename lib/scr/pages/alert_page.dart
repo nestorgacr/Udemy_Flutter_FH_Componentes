@@ -30,7 +30,7 @@ class AlertPage extends StatelessWidget {
 void _mostrarAlerta(BuildContext context){
   showDialog(
     context: context,
-    barrierDismissible: true,//cierra la alerta si se le da clic afuera
+    barrierDismissible: false,//cierra la alerta si se le da clic afuera
     builder: (context){
       return AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
