@@ -33,6 +33,7 @@ void _mostrarAlerta(BuildContext context){
     barrierDismissible: true,//cierra la alerta si se le da clic afuera
     builder: (context){
       return AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
         title: Text('Titulo'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
