@@ -34,7 +34,7 @@ class _InputPageState extends State<InputPage> {
           Divider(),
           _crearFecha(context),
           Divider(),
-          _createDropdown(),
+          _createDropdown(context),
         ],
       ),
     );
@@ -145,15 +145,23 @@ class _InputPageState extends State<InputPage> {
     return lista;
   }
 
-  Widget _createDropdown() {
-    return DropdownButton(
-      value: _opcionSeleccionada,
-      items: getOpcionesDropDown(),
-      onChanged: (opt) {
-        setState(() {
-          _opcionSeleccionada = opt;
-        });
-      },
+  Widget _createDropdown(BuildContext context) {
+    return Row(
+      children: [
+        Icon(Icons.select_all),
+        SizedBox(width: 30.0),
+        Expanded(
+          child: DropdownButton(
+            value: _opcionSeleccionada,
+            items: getOpcionesDropDown(),
+            onChanged: (opt) {
+              setState(() {
+                _opcionSeleccionada = opt;
+              });
+            },
+          ),
+        )
+      ],
     );
   }
 }
