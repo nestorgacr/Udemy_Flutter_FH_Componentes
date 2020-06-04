@@ -4,6 +4,7 @@ import 'package:udemy_componentes/scr/pages/avatar_page.dart';
 import 'package:udemy_componentes/scr/pages/card_page_page.dart';
 import 'package:udemy_componentes/scr/pages/home_page.dart';
 import 'package:udemy_componentes/scr/pages/input_page.dart';
+import 'package:udemy_componentes/scr/pages/listview_page.dart';
 import 'package:udemy_componentes/scr/pages/slider_page.dart';
 import 'package:udemy_componentes/scr/pages/alert_page.dart';
 
@@ -16,5 +17,6 @@ Map<String, WidgetBuilder> getApplicationRoutes() {
     'animatedContainer': (BuildContext context) => AnimatedContainerPage(),
     'inputs': (BuildContext context) => InputPage(),
     'slider': (BuildContext context) => SliderPage(),
+    'list': (BuildContext context) => ListaPage(),
   };
 }
